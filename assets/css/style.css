@@ -65,36 +65,25 @@ h6 {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
   text-decoration: none;
+  list-style-type: none;
+  color: #000;
 }
 
 h1,
 h2 {
   font-size: 22px;
+  color: #000;
 }
 
-p {
-  font-weight: 700;
-  font-size: 18px;
-}
-
-:root {
-  --main-color: #0065FC;
-  --main-bg-color: #F2F2F2;
-  --filter-bg-color: #DEEBFF;
-}
-
-.fa-solid {
-  color: var(--main-color);
-}
-
-main-container {
+/* Les variable*/
+/**color**/
+/*mixins*/
+.main-container {
   width: 100%;
   max-width: 767px;
   padding: 0 50px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 /*header*/
@@ -103,9 +92,9 @@ header {
   justify-content: center;
   align-items: center;
   padding: 14px 89px 13px 89px;
+  background: #FFF;
 }
-
-.logo {
+header .logo {
   width: 197;
   height: 36px;
 }
@@ -113,24 +102,47 @@ header {
 /*section localisation*/
 .localisation {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 17px;
   height: 50px;
-  background: var(--Grey-2, #EAEAEA);
+  background: #EAEAEA;
 }
 
 .explorer {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   gap: 50px;
-  background: rgb(246, 246, 246);
+  background: #F6F6F6;
+}
+.explorer h1 {
+  margin-top: 39px;
+  margin-left: 42px;
+  margin-right: 58px;
+  font-weight: 700;
+}
+.explorer p {
+  font-weight: 300;
+  font-size: 18px;
+}
+.explorer .btn {
+  background: #9356DC;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  margin-bottom: 57px;
+  color: #FFF;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
-.fonctionnement ul li {
+.fonctionnement ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+}
+.fonctionnement li {
   display: flex;
   gap: 27px;
   justify-content: start;
@@ -141,17 +153,15 @@ header {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background: var(--Background, #F6F6F6);
+  background: #FFF;
 }
-
-.restaurants-cards {
+.restaurants .restaurants-cards {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
 .restaurants-cards .card img {
-  box-sizing: border-box;
   object-fit: cover;
   height: 231px;
   width: 100%;
@@ -159,7 +169,7 @@ header {
 }
 
 .restaurants-cards .card {
-  background: red;
+  background: #FFF;
 }
 
 .card-content {
@@ -175,6 +185,35 @@ header {
 .card-subtitle {
   font-size: 17px;
   font-weight: 300;
+}
+
+/*footer*/
+footer {
+  display: block;
+  background: #000;
+  padding: 22px 25px;
+}
+footer h3 {
+  font-family: Shrikhand;
+  font-weight: 400;
+  color: #FFF;
+  margin-bottom: 16px;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 7px;
+  padding-left: 0;
+}
+footer li {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 11px;
+}
+footer p, footer i, footer a {
+  color: #FFF;
 }
 
 /*# sourceMappingURL=style.css.map */
