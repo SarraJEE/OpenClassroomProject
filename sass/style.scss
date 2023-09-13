@@ -109,7 +109,7 @@ $green: #99E2D0;
 
 .main-container {
     width: 100%;
-    max-width: 767px;
+    max-width: 1440px;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -171,7 +171,8 @@ header {
     }
 
     .btn {
-        background: #9356DC;
+        background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+        border: transparent;
         width: 218px;
         height: 50px;
         border-radius: 25px;
@@ -207,7 +208,7 @@ header {
         justify-content: start;
         align-items: center;
         height: 72px;
-        width: 322px;
+        width: 100%;
         margin-bottom: 25px;
         border-radius: 20px;
         background: $grey-light;
@@ -301,8 +302,10 @@ header {
 
 .card-content {
     display: flex;
-    flex-direction: column;
-    gap: 32;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
 
 }
 
