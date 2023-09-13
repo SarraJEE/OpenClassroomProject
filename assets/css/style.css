@@ -78,6 +78,11 @@ h2 {
 /* Les variable*/
 /**color**/
 /*mixins*/
+body {
+  display: flex;
+  justify-content: center;
+}
+
 .main-container {
   width: 100%;
   max-width: 1440px;

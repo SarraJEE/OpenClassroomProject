@@ -105,7 +105,10 @@ $green: #99E2D0;
     justify-content: center;
     align-items: center;
 }
-
+body{
+    display: flex;
+    justify-content: center;
+}
 
 .main-container {
     width: 100%;
