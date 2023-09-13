@@ -65,7 +65,7 @@ h6 {
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-    text-decoration:none;
+    text-decoration: none;
     list-style-type: none;
     color: #000;
 
@@ -85,20 +85,22 @@ h2 {
 
 
 /* Les variable*/
- /**color**/
-$color-primaire:#9356DC;
-$color-secondaire:#FF79DA ;
-$color-Tertiaire:#99E2D0;
+/**color**/
+$color-primaire: #9356DC;
+$color-secondaire: #FF79DA;
+$color-Tertiaire: #99E2D0;
+$color-green: #008766;
 //background
-$white:#FFF;
-$Grey-2:#EAEAEA;
-$grey-light:#F6F6F6;
-$black:#353535;
+$white: #FFF;
+$Grey-2: #EAEAEA;
+$grey-light: #F6F6F6;
+$black: #353535;
+$green: #99E2D0;
 
 
 /*mixins*/
 
-@mixin flex{
+@mixin flex {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,11 +110,12 @@ $black:#353535;
 .main-container {
     width: 100%;
     max-width: 767px;
-    padding: 0 50px;
+    padding: 0;
     display: flex;
-flex-direction: column;
+    flex-direction: column;
 
 }
+
 /*header*/
 header {
     @include flex;
@@ -122,100 +125,193 @@ header {
     .logo {
         width: 197;
         height: 36px;
-    
     }
+
 }
 
 
-/*section localisation*/
-.localisation{
+/*section localisation des resturants*/
+.localisation-restaurants {
     @include flex;
     gap: 17px;
     height: 50px;
-    background:$Grey-2;
+    background: $Grey-2;
+
+    p {
+        font-size: 16px;
+        font-weight: 500;
+        color: $black
+    }
 }
 
 
 //* section exploration*//
-.explorer{
+.explorer {
     @include flex;
     flex-direction: column;
     gap: 50px;
-    background:$grey-light;
-   h1{
-    margin-top: 39px;
-    margin-left: 42px;
-    margin-right: 58px;
-    font-weight: 700;
-   }
-   p{
-    font-weight: 300;
-    font-size: 18px;
-   }
-   .btn{
-    background: #9356DC;
-    width: 218px;
-    height: 50px;
-    border-radius: 25px;
-    margin-bottom: 57px;
-    color:$white;
-    box-shadow:0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    background: $grey-light;
 
-   }
-}
+    h1 {
+        margin-top: 39px;
+        margin-left: 42px;
+        margin-right: 58px;
+        font-weight: 700;
+        text-align: center;
+    }
 
-//*section fonctionnement*//
-.fonctionnement{
+    p {
+        font-weight: 300;
+        font-size: 18px;
+        color: $black;
+        margin-left: 34px;
+        margin-right: 26px;
 
-ul{
-    display: flex;
-    flex-direction: column;
-    padding-left: 0;
-}
 
- li{
-    display: flex;
-    gap: 27px;
-    justify-content:start;
-    align-items: center;
-}
+    }
 
-}
+    .btn {
+        background: #9356DC;
+        width: 218px;
+        height: 50px;
+        border-radius: 25px;
+        margin-bottom: 57px;
+        color: $white;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        font-size: 16px;
+        font-weight: 500;
 
-//*section restaurants *//
-.restaurants{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background:$white;
-    .restaurants-cards{
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
     }
 }
 
-.restaurants-cards .card img{
-    object-fit: cover;
-    height:231px;
-    width: 100%;
-    border-radius: 15px;
-}
-.restaurants-cards .card{
-   background:$white;
+//*section fonctionnement*//
+.fonctionnement {
+    h1 {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding-left: 20px;
+        padding-bottom: 26px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+    }
+
+    li {
+        display: flex;
+        gap: 27px;
+        justify-content: start;
+        align-items: center;
+        height: 72px;
+        width: 322px;
+        margin-bottom: 25px;
+        border-radius: 20px;
+        background: $grey-light;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+
+
+        span {
+            width: 24px;
+            height: 24px;
+            color: $white;
+            background: $color-primaire;
+            border-radius: 50%;
+            font-weight: 500;
+            text-align: center;
+            margin-left: -12px;
+
+        }
+
+        .fa-store {
+            color: $color-primaire;
+        }
+    }
+
+
+
 
 }
-.card-content{
+
+
+//*section restaurants *//
+.restaurants {
     display: flex;
     flex-direction: column;
-   
-}    
+    gap: 20px;
+    background: $grey-light;
 
-.card-title{
+    h2 {
+        padding-left: 20px;
+        font-weight: 700;
+        margin-top: 54px;
+
+    }
+
+
+    .restaurants-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding-left: 17px;
+        margin-top: 3px;
+
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    span {
+        position: relative;
+        top: -248px;
+        left: 396px;
+        border: #008766;
+        border-radius: 2px;
+        padding: 7px 9px;
+        text-align: center;
+        width: 80px;
+        height: 29px;
+        background-color: $green;
+        color: $color-green;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+    }
+}
+
+
+.restaurants-cards .card img {
+    object-fit: cover;
+    height: 231px;
+    width: 100%;
+    border-radius: 15px;
+
+
+}
+
+.restaurants-cards .card {
+    background: $white;
+
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32;
+
+}
+
+.card-title {
     font-size: 18px;
     font-weight: 700;
 }
-.card-subtitle{
+
+.card-subtitle {
     font-size: 17px;
     font-weight: 300;
 
@@ -224,33 +320,38 @@ ul{
 
 
 /*footer*/
-footer{
+footer {
     display: block;
-    background:#000;
+    background: $black;
     padding: 22px 25px;
-    h3{
+
+    h3 {
         font-family: Shrikhand;
         font-weight: 400;
         color: $white;
         margin-bottom: 16px;
 
     }
-    ul{
+
+    ul {
         display: flex;
-       flex-direction: column;
-       justify-content: start;
-       gap: 7px;
-       padding-left: 0;
-    
+        flex-direction: column;
+        justify-content: start;
+        gap: 7px;
+        padding-left: 0;
+
     }
 
-    li{
+    li {
         display: flex;
         flex-direction: row;
         justify-content: start;
         gap: 11px;
-       }
-    p,i,a{
+    }
+
+    p,
+    i,
+    a {
         color: #FFF;
     }
 }
