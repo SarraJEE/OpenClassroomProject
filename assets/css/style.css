@@ -60,37 +60,9 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/****** General ***********/
-* {
-  font-family: "Roboto", sans-serif;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style-type: none;
-  color: #000;
-}
-
-h1,
-h2 {
-  font-size: 22px;
-  color: #000;
-}
-
 /* Les variable*/
 /**color**/
 /*mixins*/
-body {
-  display: flex;
-  justify-content: center;
-}
-
-.main-container {
-  width: 100%;
-  max-width: 1440px;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-
 /*header*/
 header {
   display: flex;
@@ -104,6 +76,19 @@ header .logo {
   height: 36px;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 /*section localisation des resturants*/
 .localisation-restaurants {
   display: flex;
@@ -113,9 +98,15 @@ header .logo {
   height: 50px;
   background: #EAEAEA;
 }
+.localisation-restaurants h1 {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
 .localisation-restaurants p {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
   color: #353535;
 }
 
@@ -154,7 +145,7 @@ header .logo {
   font-weight: 500;
 }
 
-.fonctionnement h1 {
+.fonctionnement h2 {
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -167,7 +158,7 @@ header .logo {
   flex-direction: column;
   padding-left: 20px;
 }
-.fonctionnement li {
+.fonctionnement .step {
   display: flex;
   gap: 27px;
   justify-content: start;
@@ -178,8 +169,9 @@ header .logo {
   border-radius: 20px;
   background: #F6F6F6;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  margin-right: 20px;
 }
-.fonctionnement li span {
+.fonctionnement .step_number {
   width: 24px;
   height: 24px;
   color: #FFF;
@@ -189,7 +181,11 @@ header .logo {
   text-align: center;
   margin-left: -12px;
 }
-.fonctionnement li .fa-store {
+.fonctionnement .step_title {
+  font-size: 16px;
+  font-weight: 500;
+}
+.fonctionnement .step .fa-store {
   color: #9356DC;
 }
 
@@ -204,24 +200,52 @@ header .logo {
   font-weight: 700;
   margin-top: 54px;
 }
-.restaurants .restaurants-cards {
+.restaurants .restaurants_cards {
   display: flex;
   flex-direction: column;
   gap: 18px;
   padding-left: 17px;
   margin-top: 3px;
 }
-.restaurants .restaurants-cards .card {
+.restaurants .restaurants_cards .card {
+  position: relative;
+  background: #FFF;
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 17px;
+  padding-right: 18px;
 }
-.restaurants span {
-  position: relative;
-  top: -248px;
-  left: 396px;
+.restaurants .restaurants_cards .card_img {
+  object-fit: cover;
+  height: 231px;
+  width: 100%;
+  border-radius: 15px;
+}
+.restaurants .restaurants_cards .card_content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurants .restaurants_cards .card_title {
+  font-size: 18px;
+  font-weight: 700;
+}
+.restaurants .restaurants_cards .card_subtitle {
+  font-size: 17px;
+  font-weight: 300;
+}
+.restaurants .new_btn {
+  position: absolute;
+  top: 26px;
+  right: 26px;
   border: #008766;
-  border-radius: 2px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 3px;
   padding: 7px 9px;
   text-align: center;
   width: 80px;
@@ -231,33 +255,25 @@ header .logo {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-.restaurants-cards .card img {
-  object-fit: cover;
-  height: 231px;
-  width: 100%;
-  border-radius: 15px;
+.like_btn {
+  position: absolute;
+  bottom: 26px;
+  right: 26px;
 }
 
-.restaurants-cards .card {
-  background: #FFF;
+/****** General ***********/
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  color: #000;
 }
 
-.card-content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card-title {
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.card-subtitle {
-  font-size: 17px;
-  font-weight: 300;
+h1,
+h2 {
+  font-size: 22px;
+  color: #000;
 }
 
 /*footer*/
