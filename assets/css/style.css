@@ -261,6 +261,47 @@ body {
   right: 26px;
 }
 
+footer {
+  display: block;
+  background: #353535;
+  padding: 22px 25px;
+}
+footer_title {
+  font-family: Shrikhand, cursive;
+  font-weight: 400;
+  color: #FFF;
+  margin-bottom: 16px;
+}
+footer_link {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 7px;
+  padding-left: 0;
+}
+footer li {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 11px;
+}
+footer li i {
+  color: #FFF;
+}
+footer li p,
+footer li a {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+footer li address {
+  font-style: normal;
+}
+
 /****** General ***********/
 * {
   font-family: "Roboto", sans-serif;
