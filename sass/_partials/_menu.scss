@@ -1,0 +1,14 @@
+.header_menu {
+    @include flex;
+    justify-content:center;
+    padding: 14px 89px 13px 17px;
+    background: $white;
+    gap: 88px;
+
+    .logo_menu {
+        width: 197px;
+        height: 36px;
+        padding: 0px 19px 0px 16px;
+    }
+
+}
