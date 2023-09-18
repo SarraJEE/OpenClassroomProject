@@ -206,8 +206,7 @@ header .logo {
   margin-bottom: 150px;
   animation: flash 1s linear infinite;
 }
-
-.fa-utensils {
+.lettre .fa-utensils {
   background-image: linear-gradient(180deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

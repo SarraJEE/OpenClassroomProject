@@ -22,13 +22,14 @@
     margin-bottom: 150px;
     animation: flash 1s linear infinite;
 
-}
+
 .fa-utensils{
     background-image: linear-gradient(180deg, $color-secondaire , $color-primaire );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         -moz-text-fill-color: transparent;
         -moz-background-clip: text;
+}
 }
 
 body{
