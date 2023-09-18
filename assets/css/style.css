@@ -63,6 +63,92 @@ h6 {
 /* Les variable*/
 /**color**/
 /*mixins*/
+/*animation loader*/
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes flash {
+  0% {
+    color: #9356DC;
+    text-shadow: 0 0 8px #FF79DA;
+  }
+  90% {
+    color: #9356DC;
+    text-shadow: none;
+  }
+  100% {
+    color: #FF79DA;
+    text-shadow: 0 0 8px #FF79DA;
+    transform: translateY(-30px);
+  }
+}
+.lettre:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.lettre:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.lettre:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.lettre:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.lettre:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.lettre:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.lettre:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.lettre:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.lettre:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+.lettre:nth-child(10) {
+  animation-delay: 1s;
+}
+
+.lettre:nth-child(11) {
+  animation-delay: 1.1s;
+}
+
+/*animation  coeur */
+@keyframes full-heart {
+  0% {
+    opacity: 0.5;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*header*/
 header {
   display: flex;
@@ -74,6 +160,28 @@ header {
 header .logo {
   width: 197;
   height: 36px;
+}
+
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  opacity: 0.9;
+  animation: disappear 1s 1.5s forwards;
+}
+
+.lettre {
+  color: #FF79DA;
+  font-family: Shrikhand;
+  font-size: 50px;
+  letter-spacing: 10px;
+  margin-bottom: 150px;
+  animation: flash 1s linear infinite;
 }
 
 body {
@@ -205,7 +313,8 @@ body {
   flex-direction: column;
   gap: 18px;
   padding-left: 17px;
-  margin-top: 3px;
+  padding-right: 18px;
+  margin-bottom: 66px;
 }
 .restaurants .restaurants_cards .card {
   position: relative;
@@ -213,14 +322,12 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 17px;
-  padding-right: 18px;
 }
 .restaurants .restaurants_cards .card_img {
   object-fit: cover;
   height: 231px;
   width: 100%;
-  border-radius: 15px;
+  border-radius: 15px 15px 0px 0px;
 }
 .restaurants .restaurants_cards .card_content {
   display: flex;
@@ -259,6 +366,12 @@ body {
   position: absolute;
   bottom: 26px;
   right: 26px;
+  width: 22px;
+  height: 21px;
+  transform: scale(1);
+}
+.like_btn:hover {
+  transform: scale(1.5);
 }
 
 footer {

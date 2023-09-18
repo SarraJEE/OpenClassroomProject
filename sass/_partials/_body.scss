@@ -1,3 +1,28 @@
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    opacity: 0.9;
+    animation: disappear 1s 1.5s forwards;
+    
+}
+
+
+.lettre {
+    color: $color-secondaire;
+    font-family:Shrikhand;
+    font-size: 50px;
+    letter-spacing: 10px;
+    margin-bottom: 150px;
+    animation: flash 1s linear infinite;
+
+}
+
 body{
     display: flex;
     justify-content: center;
@@ -151,7 +176,8 @@ body{
         flex-direction: column;
         gap: 18px;
         padding-left: 17px;
-        margin-top: 3px;
+        padding-right: 18px;
+        margin-bottom: 66px;
 
 
         .card {
@@ -160,8 +186,7 @@ body{
             display: flex;
             flex-direction: column;
             width: 100%;
-            padding: 17px;
-            padding-right: 18px;
+            
 
 
 
@@ -169,7 +194,7 @@ body{
             &_img{ object-fit: cover;
                 height: 231px;
                 width: 100%;
-                border-radius: 15px;
+                border-radius: 15px 15px 0px 0px;
 
             }
             &_content {
@@ -219,5 +244,13 @@ body{
     bottom: 26px;
     right: 26px;
 
-    
+    width: 22px;
+height: 21px;
+    transform: scale(1);
+
+    &:hover{
+        transform: scale(1.5);
+    }
 }
+    
+
