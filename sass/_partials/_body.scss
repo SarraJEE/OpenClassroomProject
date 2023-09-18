@@ -93,6 +93,9 @@ body{
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
         font-size: 16px;
         font-weight: 500;
+         &:hover{
+        background: lighten($color-primaire, 5);
+         }
 
     }
 }
@@ -240,17 +243,20 @@ body{
 
 
 .like_btn{
+    display: block;
     position: absolute;
     bottom: 26px;
     right: 26px;
-
-    width: 22px;
-height: 21px;
-    transform: scale(1);
-
     &:hover{
-        transform: scale(1.5);
-    }
+        font-weight: 700;
+        background-image: linear-gradient(180deg, $color-secondaire , $color-primaire );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        -moz-background-clip: text;
+        animation: full-heart 0.5s ease-in-out both;
+         
+          }
 }
     
 
