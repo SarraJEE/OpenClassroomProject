@@ -305,7 +305,7 @@ body {
 @media (min-width: 1025px) {
   .fonctionnement ul {
     flex-direction: row;
-    flex-wrap: nowrap;
+    gap: 25px;
   }
 }
 .fonctionnement .step {
@@ -338,12 +338,25 @@ body {
 .fonctionnement .step .fa-store {
   color: #9356DC;
 }
+@media (min-width: 1025px) {
+  .fonctionnement {
+    padding: 50px 180px;
+  }
+}
 
 .restaurants {
   display: flex;
   flex-direction: column;
   gap: 20px;
   background: #F6F6F6;
+}
+@media (min-width: 1025px) {
+  .restaurants {
+    gap: 28px;
+    padding-left: 180px;
+    padding-right: 180px;
+    margin-top: 30px;
+  }
 }
 .restaurants h2 {
   padding-left: 20px;
@@ -353,16 +366,20 @@ body {
 .restaurants .restaurants_cards {
   display: flex;
   flex-direction: column;
+  align-items: start;
   gap: 18px;
   padding-left: 17px;
   padding-right: 18px;
   margin-bottom: 66px;
 }
-@media (mi-width: 1025px) {
+@media (min-width: 1025px) {
   .restaurants .restaurants_cards {
-    flex-direction: row;
-    width: 40%;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+    align-items: start;
+    justify-content: space-between;
+    padding: 0;
+    gap: 50px;
+    margin-bottom: 30px;
   }
 }
 .restaurants .restaurants_cards .card {
@@ -371,7 +388,15 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-radius: 15px 15px 0px 0px;
+  padding: 17px;
+  padding-right: 18px;
+  border-radius: 15px 15px 15px 15px;
+}
+@media (min-width: 1025px) {
+  .restaurants .restaurants_cards .card {
+    width: 44%;
+    padding: 0;
+  }
 }
 .restaurants .restaurants_cards .card_img {
   object-fit: cover;
@@ -441,66 +466,81 @@ body {
   transition: opacity 0.5s ease-in-out;
   /* &:hover {
 
-       cursor: pointer;
-       font-weight: 700;
-       background-image: linear-gradient(180deg, $color-secondaire , $color-primaire );
-       -webkit-background-clip: text;
-       -webkit-text-fill-color: transparent;
-       -moz-text-fill-color: transparent;
-       -moz-background-clip: text;
-       animation: full-heart 0.5s ease-in-out both;
+      cursor: pointer;
+      font-weight: 700;
+      background-image: linear-gradient(180deg, $color-secondaire , $color-primaire );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+      -moz-background-clip: text;
+      animation: full-heart 0.5s ease-in-out both;
 
 
-   }*/
+  }*/
 }
 .like_btnf:hover {
   opacity: 1;
 }
 
-footer {
+.footer {
   display: block;
   background: #353535;
   padding: 22px 25px;
 }
-@media (mi-width: 1025px) {
-  footer {
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
+.footer_title {
+  font-family: Shrikhand, cursive;
+  font-weight: 400;
+  color: #FFF;
+  margin-bottom: 16px;
+}
+@media (min-width: 1025px) {
+  .footer_title {
+    padding: 25px;
   }
-  footer_title {
-    font-family: Shrikhand, cursive;
-    font-weight: 400;
-    color: #FFF;
-    margin-bottom: 16px;
-  }
-  footer_link {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    gap: 7px;
-    padding-left: 0;
-  }
-  footer li {
-    display: flex;
+}
+.footer_link {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 7px;
+  padding-left: 0;
+}
+@media (min-width: 1025px) {
+  .footer_link {
     flex-direction: row;
-    justify-content: start;
-    gap: 11px;
+    justify-content: space-between;
+    padding: 30px 25px;
   }
-  footer li i {
-    color: #FFF;
-  }
-  footer li p,
-  footer li a {
-    color: #FFF;
-    font-size: 16px;
-    font-weight: 400;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
-  footer li address {
-    font-style: normal;
+}
+.footer li {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 11px;
+}
+.footer li i {
+  color: #FFF;
+}
+.footer li p,
+.footer li a {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.footer li address {
+  font-style: normal;
+}
+@media (min-width: 1025px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 114px;
+    gap: 16px;
+    padding: 30px 25px;
   }
 }
 
