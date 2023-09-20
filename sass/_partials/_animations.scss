@@ -94,28 +94,26 @@
 		opacity: 1;
 	}
 }
-.progress {
-    &__bar {
-        opacity: 0;
-    }
-}
 
-@keyframes progress-color{
-    0% {
-        transform: scale3d(0);
-        opacity: .5;
-    }
-    17% {
-        transform: scale3d(.18);
-    }   
-    24% {
-        transform: scale3d(.4);
-    }
-    46% {
-        transform: scale3d(.81);
-    }
-    100% {
-        transform:scale3d(1);
-    }
+@keyframes empty-heart {
+	
+	100% {
+		opacity: 1;
+	}
+    80% {
+		opacity: .9;
 }
-
+60% {
+    opacity: .8;
+}
+40% {
+    opacity: .7;
+}
+    20% {
+		opacity: .6;
+	}
+	0% {
+		opacity: .5;
+	}
+	
+}
