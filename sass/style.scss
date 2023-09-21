@@ -6,23 +6,7 @@
 @import './_partials/body';
 @import './_partials/footer';
 @import'./_partials/menu';
-/****** General ***********/
-
- *{
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none;
-    color: #000;
-
-
-}
-
-h1,
-h2 {
-    font-size: 22px;
-    color: #000;
-}
+@import'./_partials/general';
 
 
 
@@ -38,39 +22,3 @@ h2 {
 
 
 
-/*footer*/
-footer {
-    display: block;
-    background: $black;
-    padding: 22px 25px;
-
-    h3 {
-        font-family: Shrikhand;
-        font-weight: 400;
-        color: $white;
-        margin-bottom: 16px;
-
-    }
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        gap: 7px;
-        padding-left: 0;
-
-    }
-
-    li {
-        display: flex;
-        flex-direction: row;
-        justify-content: start;
-        gap: 11px;
-    }
-
-    p,
-    i,
-    a {
-        color: #FFF;
-    }
-}

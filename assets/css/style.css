@@ -439,24 +439,22 @@ body {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-.like_btne {
-  background: transparent;
+.like_btn {
   position: absolute;
   bottom: 26px;
   right: 26px;
-  display: block;
   width: 22px;
   height: 21px;
+}
+
+.like_btne {
+  background: transparent;
+  display: block;
 }
 
 .like_btnf {
   background-image: transparent;
   opacity: 0;
-  position: absolute;
-  bottom: 26px;
-  right: 26px;
-  width: 22px;
-  height: 21px;
   font-weight: 700;
   background-image: linear-gradient(180deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
@@ -559,6 +557,30 @@ body {
   padding: 0px 19px 0px 16px;
 }
 
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.menu_img {
+  width: 100%;
+  height: 275px;
+}
+.menu_content {
+  border-radius: 40px 40px 0px 0px;
+  background: white;
+  margin-top: -80px;
+}
+.menu_info {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+}
+.menu .like_btn {
+  top: 26px;
+}
+
 /****** General ***********/
 * {
   font-family: "Roboto", sans-serif;
@@ -572,37 +594,6 @@ h1,
 h2 {
   font-size: 22px;
   color: #000;
-}
-
-/*footer*/
-footer {
-  display: block;
-  background: #353535;
-  padding: 22px 25px;
-}
-footer h3 {
-  font-family: Shrikhand;
-  font-weight: 400;
-  color: #FFF;
-  margin-bottom: 16px;
-}
-footer ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  gap: 7px;
-  padding-left: 0;
-}
-footer li {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  gap: 11px;
-}
-footer p,
-footer i,
-footer a {
-  color: #FFF;
 }
 
 /*# sourceMappingURL=style.css.map */
