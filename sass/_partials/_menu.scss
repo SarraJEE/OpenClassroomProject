@@ -1,4 +1,5 @@
 .header_menu {
+    position: relative;
     @include flex;
     justify-content: center;
     padding: 14px 89px 13px 17px;
@@ -10,42 +11,200 @@
         height: 36px;
         padding: 0px 19px 0px 16px;
     }
-
+a{
+    position: absolute;
+    left: 25px;
+}
 }
 
 .menu {
-   
+
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    
-   
+
+
+
     &_img {
         width: 100%;
         height: 275px;
+        object-fit: cover;
 
-        
+
     }
 
 
     &_content {
-
+        background: $Grey-2;
         border-radius: 40px 40px 0px 0px;
-        background:white;
-        margin-top: -80px;
-    
+        margin-top: -71px;
+
     }
 
 
-    &_info{
+    &_info {
+
+        
+
         position: relative;
         display: flex;
-        justify-content: flex-start;
+        flex-wrap: nowrap;
+        justify-content: space-between;
         margin-bottom: 40px;
+        padding-left: 17px;
+        padding-right: 17px;
+        padding-top: 31px;
+
+
+
     }
-  .like_btn{
-    top: 26px;
-  }
-    
+
+
+
+    &_title {
+        color: var(--Black, #101010);
+        font-family: Shrikhand;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+
+    }
+
+    .like_btn {
+        top: 42px;
+    }
+
+    &_plats {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+
+
+    .plat_list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
        
+
+
+        .underline_title {
+
+            text-transform: uppercase;
+            margin-bottom: rem(20);
+            font-weight: 300;
+            font-size: rem(16);
+
+
+
+            &::after {
+                
+            font-size: rem(16);
+                content: " ";
+                display: block;
+                height:0px;             
+                width:40px ;
+               margin-top: 6px;
+                border-bottom:solid 3px  #99E2D0;
+                
+                
+            }
+
+
+        }
+
+       
+
+        .plat{
+          
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+            background: $white;
+            gap: 5px;
+            height: 69px;
+            border-radius: 15px 15px;
+            box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
+            margin-right:14px;
+            opacity: 0;
+            animation: appear 1s 1s ease-out forwards;
+
+
+          
+            
+
+
+
+
+            .plat_price {
+                
+                align-self: flex-end;
+               padding-right: 0;
+            }
+
+           
+            
+        }
+i{
+    color: #FFF;
+}
+
+        .plat_confirmation {
+             display: flex;
+            background-color: #99E2D0;
+            font-size:20px;
+            border-top-right-radius: 16px;
+            border-bottom-right-radius: 16px;
+            width:56px;
+            align-items: center;
+            justify-content: center;
+            height: 69px;
+            margin-left: -30px;
+
+            &:hover{
+                overflow: visible;
+                margin-right: 30px;
+            }
+
+           
+        }
+
+    }
+
+
+
+    .plat_title {
+        font-size: 18px;
+        font-weight: 700;
+        padding-left: 13px;
+
+
+
+
+    }
+
+    .plat_subtitle {
+        font-size: 17px;
+        font-weight: 300;
+        padding-left: 13px;
+    }
+
+
+
+
+    .commande {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+
+    }
+
+
 }
