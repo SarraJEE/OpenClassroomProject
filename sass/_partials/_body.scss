@@ -127,21 +127,20 @@ body {
 
 }
 .fonctionnement {
+    padding: 20px;
 
     h2 {
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
-        padding-left: 20px;
         padding-bottom: 26px;
     }
 
     ul {
         display: flex;
         flex-direction: column;
-        padding-left: 32px;
-
+        
         @media (min-width: 1025px) {
             flex-direction: row;
             gap: 25px;
@@ -249,9 +248,8 @@ margin-top: 30px;
             display: flex;
             flex-direction: column;
             width: 100%;
-            padding: 17px;
-            padding-right: 18px;
             border-radius: 15px 15px 15px 15px;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 
 
             @media(min-width:1025px) {
@@ -321,10 +319,9 @@ margin-top: 30px;
 }
 .like_btn{
     position: absolute;
-    bottom: 26px;
-    right: 26px;
-    width: 22px;
-    height: 21px;
+    bottom: 17px;
+    right: 23px;
+   font-size: 26px;
 }
 
 .like_btne {
