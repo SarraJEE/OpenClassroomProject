@@ -61,7 +61,6 @@ a{
     }
 
 
-
     &_title {
         color: var(--Black, #101010);
         font-family: Shrikhand;
@@ -119,7 +118,7 @@ a{
 
        
 
-        .plat{
+        .list{
           
             display: flex;
             flex-direction: row;
@@ -135,12 +134,7 @@ a{
             opacity: 0;
             animation: appear 1s 1s ease-out forwards;
 
-
-          
-            
-
-
-
+        
 
             .plat_price {
                 
