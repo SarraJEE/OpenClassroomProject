@@ -11,10 +11,11 @@
         height: 36px;
         padding: 0px 19px 0px 16px;
     }
-a{
-    position: absolute;
-    left: 25px;
-}
+
+    a {
+        position: absolute;
+        left: 25px;
+    }
 }
 
 .menu {
@@ -39,23 +40,19 @@ a{
         background: $Grey-2;
         border-radius: 40px 40px 0px 0px;
         margin-top: -71px;
+        padding: 20px;
 
     }
 
 
     &_info {
 
-        
 
-        position: relative;
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
+        align-items: center;
         margin-bottom: 40px;
-        padding-left: 17px;
-        padding-right: 17px;
-        padding-top: 31px;
-
 
 
     }
@@ -70,56 +67,48 @@ a{
 
     }
 
+
+
+    .heart {
+        position: relative;
+
+    }
+
     .like_btn {
-        top: 42px;
+        bottom: -11px;
     }
 
-    &_plats {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: 40px;
-    }
+    .menu_list {
 
-
-
-    .plat_list {
         display: flex;
         flex-direction: column;
         gap: 12px;
-
+        margin-bottom: 40px;
        
 
-
-        .underline_title {
+        &_title {
 
             text-transform: uppercase;
             margin-bottom: rem(20);
             font-weight: 300;
             font-size: rem(16);
 
-
-
             &::after {
-                
-            font-size: rem(16);
+
+                font-size: rem(16);
                 content: " ";
                 display: block;
-                height:0px;             
-                width:40px ;
-               margin-top: 6px;
-                border-bottom:solid 3px  #99E2D0;
-                
-                
-            }
+                height: 0px;
+                width: 40px;
+                margin-top: 6px;
+                border-bottom: solid 3px #99E2D0;
 
+            }
 
         }
 
-       
+        &_item {
 
-        .list{
-          
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -130,75 +119,105 @@ a{
             height: 69px;
             border-radius: 15px 15px;
             box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
-            margin-right:14px;
+            margin-right: 14px;
+            overflow: hidden;
             opacity: 0;
-            animation: appear 1s 1s ease-out forwards;
+            animation: apparition 1.5s 1s forwards;
 
-        
+            &.no1{
+                animation-delay: 0.2s;
+              }
+            
+             &.no2{
+                animation-delay: 0.4s;
+              }
+              &.no3{
+                animation-delay: 0.6s;
+              }
 
-            .plat_price {
-                
-                align-self: flex-end;
-               padding-right: 0;
+
+            &_info {
+                margin: 10px;
+                line-height: 25px;
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+               overflow: hidden;
+
+
             }
 
-           
+            &_name {
+                font-size: 18px;
+                font-weight: 700;
+                padding-left: 13px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+            &_ingredients {
+                font-size: 17px;
+                font-weight: 300;
+                padding-left: 13px;  
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+            &_price {
+                width: 10%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                font-weight: bold;
+                margin-top: 30px;
+                margin-right: 20px;
+            }
+
+            &_checked {
+
+                display: flex;
+                background-color: #99E2D0;
+                font-size:20px;
+                border-top-right-radius: 16px;
+                border-bottom-right-radius: 16px;
+                align-items: center;
+                justify-content: center;
+                height: 69px;
+                width: 80px;
+                overflow: hidden;
+
+                &:hover{
+                    animation: test 1.5s;
+                }
+                
+                
+                  
+
+                i {
+                    color: $white;
+                }
+               
+
+            }
             
+            
+            .menu_list_item:focus .checked {
+                animation: test  2s;
+              }
+
+
+
         }
-i{
-    color: #FFF;
+
+    }
 }
 
-        .plat_confirmation {
-             display: flex;
-            background-color: #99E2D0;
-            font-size:20px;
-            border-top-right-radius: 16px;
-            border-bottom-right-radius: 16px;
-            width:56px;
-            align-items: center;
-            justify-content: center;
-            height: 69px;
-            margin-left: -30px;
-
-            &:hover{
-                overflow: visible;
-                margin-right: 30px;
-            }
-
-           
-        }
-
-    }
-
-
-
-    .plat_title {
-        font-size: 18px;
-        font-weight: 700;
-        padding-left: 13px;
-
-
-
-
-    }
-
-    .plat_subtitle {
-        font-size: 17px;
-        font-weight: 300;
-        padding-left: 13px;
-    }
-
-
-
-
-    .commande {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 40px;
-
-    }
-
+.commande {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
 
 }

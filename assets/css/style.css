@@ -170,49 +170,25 @@ h6 {
     opacity: 0.5;
   }
 }
-/* animation plats*/
-@keyframes appear {
+@keyframes test {
+  from {
+    width: 0;
+  }
   to {
-    opacity: 1;
-    transform: translateX(0);
+    width: 100px;
   }
 }
-.list:nth-child(1) {
-  animation-delay: 0.2s;
+/*animation apparition des plats*/
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
-
-.list:nth-child(2) {
-  animation-delay: 0.4s;
-}
-
-.list:nth-child(3) {
-  animation-delay: 0.6s;
-}
-
-.list:nth-child(4) {
-  animation-delay: 0.8s;
-}
-
-.list:nth-child(5) {
-  animation-delay: 1s;
-}
-
-.list:nth-child(6) {
-  animation-delay: 1.2s;
-}
-
-.list:nth-child(7) {
-  animation-delay: 1.4s;
-}
-
-.list:nth-child(8) {
-  animation-delay: 1.6s;
-}
-
-.list:nth-child(9) {
-  animation-delay: 1.8s;
-}
-
 /*header*/
 header {
   display: flex;
@@ -622,16 +598,14 @@ body {
   background: #EAEAEA;
   border-radius: 40px 40px 0px 0px;
   margin-top: -71px;
+  padding: 20px;
 }
 .menu_info {
-  position: relative;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 40px;
-  padding-left: 17px;
-  padding-right: 17px;
-  padding-top: 31px;
 }
 .menu_title {
   color: var(--Black, #101010);
@@ -640,27 +614,25 @@ body {
   font-style: normal;
   font-weight: 400;
 }
+.menu .heart {
+  position: relative;
+}
 .menu .like_btn {
-  top: 42px;
+  bottom: -11px;
 }
-.menu_plats {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 40px;
-}
-.menu .plat_list {
+.menu .menu_list {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  margin-bottom: 40px;
 }
-.menu .plat_list .underline_title {
+.menu .menu_list_title {
   text-transform: uppercase;
   margin-bottom: rem(20);
   font-weight: 300;
   font-size: rem(16);
 }
-.menu .plat_list .underline_title::after {
+.menu .menu_list_title::after {
   font-size: rem(16);
   content: " ";
   display: block;
@@ -669,7 +641,7 @@ body {
   margin-top: 6px;
   border-bottom: solid 3px #99E2D0;
 }
-.menu .plat_list .list {
+.menu .menu_list_item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -681,43 +653,75 @@ body {
   border-radius: 15px 15px;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
   margin-right: 14px;
+  overflow: hidden;
   opacity: 0;
-  animation: appear 1s 1s ease-out forwards;
+  animation: apparition 1.5s 1s forwards;
 }
-.menu .plat_list .list .plat_price {
-  align-self: flex-end;
-  padding-right: 0;
+.menu .menu_list_item.no1 {
+  animation-delay: 0.2s;
 }
-.menu .plat_list i {
-  color: #FFF;
+.menu .menu_list_item.no2 {
+  animation-delay: 0.4s;
 }
-.menu .plat_list .plat_confirmation {
+.menu .menu_list_item.no3 {
+  animation-delay: 0.6s;
+}
+.menu .menu_list_item_info {
+  margin: 10px;
+  line-height: 25px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  overflow: hidden;
+}
+.menu .menu_list_item_name {
+  font-size: 18px;
+  font-weight: 700;
+  padding-left: 13px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu .menu_list_item_ingredients {
+  font-size: 17px;
+  font-weight: 300;
+  padding-left: 13px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu .menu_list_item_price {
+  width: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+.menu .menu_list_item_checked {
   display: flex;
   background-color: #99E2D0;
   font-size: 20px;
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
-  width: 56px;
   align-items: center;
   justify-content: center;
   height: 69px;
-  margin-left: -30px;
+  width: 80px;
+  overflow: hidden;
 }
-.menu .plat_list .plat_confirmation:hover {
-  overflow: visible;
-  margin-right: 30px;
+.menu .menu_list_item_checked:hover {
+  animation: test 1.5s;
 }
-.menu .plat_title {
-  font-size: 18px;
-  font-weight: 700;
-  padding-left: 13px;
+.menu .menu_list_item_checked i {
+  color: #FFF;
 }
-.menu .plat_subtitle {
-  font-size: 17px;
-  font-weight: 300;
-  padding-left: 13px;
+.menu .menu_list_item .menu_list_item:focus .checked {
+  animation: test 2s;
 }
-.menu .commande {
+
+.commande {
   display: flex;
   justify-content: center;
   align-items: center;
