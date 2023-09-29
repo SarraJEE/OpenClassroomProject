@@ -1,21 +1,17 @@
 .footer {
-
     display: block;
     background: $black;
     padding: 22px 25px;
-    
+
     &_title {
         font-family: Shrikhand, cursive;
         font-weight: 400;
         color: $white;
         margin-bottom: 16px;
-        @media (min-width: 1025px) {
-           
-            padding: 25px  ;
-         }
-       
-       
 
+        @media (min-width: 1025px) {
+            padding: 25px;
+        }
     }
 
     &_link {
@@ -24,17 +20,14 @@
         justify-content: start;
         gap: 7px;
         padding-left: 0;
-         @media (min-width: 1025px) {
+
+        @media (min-width: 1025px) {
             flex-direction: row;
             justify-content: space-between;
             padding: 30px 25px;
-           
-            
-         }
 
-       
+        }
 
-        
     }
 
     li {
@@ -51,7 +44,6 @@
 
         a {
             color: $white;
-
             font-size: 16px;
             font-weight: 400;
             font-size: 16px;
@@ -65,12 +57,13 @@
             font-style: normal;
         }
     }
+
     @media (min-width: 1025px) {
         display: flex;
         flex-direction: row-reverse;
         height: 114px;
         gap: 16px;
         padding: 30px 25px;
-     }
+    }
 
 }
