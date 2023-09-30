@@ -13,6 +13,7 @@
     }
 
     a {
+        font-size: 27px;
         position: absolute;
         left: 25px;
     }
@@ -95,7 +96,7 @@
         &_title {
 
             text-transform: uppercase;
-            margin-bottom: rem(20);
+            margin-bottom: 20px;
             font-weight: 300;
             font-size: 16px;
 
@@ -208,9 +209,7 @@
 }
 
 .commande {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   @include flex;
     margin-top: 40px;
 
 }
