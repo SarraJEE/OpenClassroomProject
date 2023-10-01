@@ -632,6 +632,7 @@ body {
 }
 .menu .heart {
   position: relative;
+  top: 7px;
 }
 .menu .like_btn {
   bottom: -7px;
