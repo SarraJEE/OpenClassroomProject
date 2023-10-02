@@ -1,7 +1,7 @@
 /*animation loader*/
-@keyframes disappear{
-    
-    to{
+@keyframes disappear {
+
+    to {
         transform: scale(0);
     }
 
@@ -12,6 +12,7 @@
         color: $color-primaire;
         text-shadow: 0 0 8px $color-secondaire;
     }
+
     90% {
         color: $color-primaire;
         text-shadow: none;
@@ -23,8 +24,8 @@
         text-shadow: 0 0 8px $color-secondaire;
         transform: translateY(-30px);
     }
-	
-    
+
+
 
 }
 
@@ -76,74 +77,81 @@
 
 /*animation  coeur */
 @keyframes full-heart {
-	0% {
-		opacity: .5;
-	}
-	20% {
-		opacity: .6;
-	}
-	40% {
-		opacity: .7;
-	}
-	60% {
-		opacity: .8;
-	}
-	80% {
-		opacity: .9;
-	}
-	100% {
-		opacity: 1;
-	}
+    0% {
+        opacity: .5;
+    }
+
+    20% {
+        opacity: .6;
+    }
+
+    40% {
+        opacity: .7;
+    }
+
+    60% {
+        opacity: .8;
+    }
+
+    80% {
+        opacity: .9;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes empty-heart {
-	
-	100% {
-		opacity: 1;
-	}
+
+    100% {
+        opacity: 1;
+    }
+
     80% {
-		opacity: .9;
-}
-60% {
-    opacity: .8;
-}
-40% {
-    opacity: .7;
-}
+        opacity: .9;
+    }
+
+    60% {
+        opacity: .8;
+    }
+
+    40% {
+        opacity: .7;
+    }
+
     20% {
-		opacity: .6;
-	}
-	0% {
-		opacity: .5;
-	}
-	
+        opacity: .6;
+    }
+
+    0% {
+        opacity: .5;
+    }
+
 }
 
 @keyframes test {
-    from{
-        width: 0; 
-       
+    from {
+        width: 0;
+
     }
 
-    to{
+    to {
         width: 100px;
-       
+
     }
 }
 
 /*animation apparition des plats*/
 
-  @keyframes apparition {
+@keyframes apparition {
     0% {
-      opacity: 0;
-      transform: scale(0);
+        opacity: 0;
+        transform: scale(0);
     }
+
     100% {
-      opacity: 1;
-      transform: scale(1);
+        opacity: 1;
+        transform: scale(1);
     }
-  }
-
-
-  
-  
+}
