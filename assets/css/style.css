@@ -198,7 +198,7 @@ header {
   background: #FFF;
 }
 header .logo {
-  width: 197;
+  width: 197px;
   height: 36px;
 }
 
@@ -595,19 +595,22 @@ body {
 }
 @media (min-width: 1025px) {
   .menu_img {
-    height: 936px;
+    height: 400px;
   }
 }
 .menu_content {
-  background: #EAEAEA;
+  background: #F6F6F6;
   border-radius: 40px 40px 0px 0px;
   margin-top: -71px;
   padding: 20px;
 }
 @media (min-width: 1025px) {
   .menu_content {
-    margin-left: 193px;
-    margin-right: 193px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 50px;
   }
 }
 .menu_info {
@@ -683,6 +686,24 @@ body {
 }
 .menu .menu_list_item.no3 {
   animation-delay: 0.6s;
+}
+.menu .menu_list_item.no4 {
+  animation-delay: 0.8s;
+}
+.menu .menu_list_item.no5 {
+  animation-delay: 1s;
+}
+.menu .menu_list_item.no6 {
+  animation-delay: 1.2s;
+}
+.menu .menu_list_item.no7 {
+  animation-delay: 1.4s;
+}
+.menu .menu_list_item.no8 {
+  animation-delay: 1.6s;
+}
+.menu .menu_list_item.no9 {
+  animation-delay: 1.8s;
 }
 .menu .menu_list_item_info {
   display: flex;

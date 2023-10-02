@@ -32,20 +32,24 @@
         object-fit: cover;
 
         @media (min-width: 1025px) {
-            height: 936px;
+            height: 400px;
+
         }
 
     }
 
     &_content {
-        background: $Grey-2;
+        background: $grey-light;
         border-radius: 40px 40px 0px 0px;
         margin-top: -71px;
         padding: 20px;
 
         @media (min-width: 1025px) {
-            margin-left: 193px;
-            margin-right: 193px;
+            margin-left: 10%;
+            margin-right: 10%;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 50px;
         }
 
     }
@@ -138,6 +142,28 @@
             &.no3 {
                 animation-delay: 0.6s;
             }
+            &.no4 {
+                animation-delay: 0.8s;
+            }
+
+            &.no5 {
+                animation-delay: 1s;
+            }
+
+            &.no6 {
+                animation-delay: 1.2s;
+            }
+            &.no7 {
+                animation-delay: 1.4s;
+            }
+
+            &.no8{
+                animation-delay: 1.6s;
+            }
+
+            &.no9{
+                animation-delay: 1.8s;
+            }
 
 
             &_info {
@@ -210,7 +236,7 @@
 }
 
 .commande {
-   @include flex;
+    @include flex;
     margin-top: 40px;
 
 }
