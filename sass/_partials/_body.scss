@@ -22,6 +22,12 @@
     margin-bottom: 150px;
     animation: flash 0.8s linear infinite;
 
+    @for $i from 1 through $num-lettres {
+        &:nth-child(#{$i}) {
+          animation-delay: $anim-delayL * $i;
+        }
+    }
+
     .fa-utensils {
         background: linear-gradient(180deg, $color-secondaire , $color-primaire );
         -webkit-background-clip: text;
